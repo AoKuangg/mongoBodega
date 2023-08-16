@@ -4,7 +4,7 @@ import { MongoClient } from "mongodb";
 dotenv.config();
 const DB = JSON.parse(process.env.ATLAS_CONNECTION);
 
-export async function connectDB(){
+export async function connDB(){
     try{
         const URI = `mongodb+srv://${DB.user}:${DB.password}@cluster0.j4ctnar.mongodb.net/${DB.database}`
         const options = {
